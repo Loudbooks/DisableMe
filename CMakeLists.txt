@@ -4,7 +4,7 @@ project(disable_me)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(OUTPUT_NAME "disable_me")
+set(OUTPUT_NAME ${PROJECT_NAME})
 
 if(WIN32)
     set(OS_NAME "windows")
@@ -27,4 +27,5 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(endstone)
 
 endstone_add_plugin(${PROJECT_NAME} src/disable_me.cpp)
-set_target_properties(disable_me PROPERTIES OUTPUT_NAME ${OUTPUT_NAME})
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ${OUTPUT_NAME})
