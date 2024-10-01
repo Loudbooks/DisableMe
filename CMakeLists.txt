@@ -4,6 +4,20 @@ project(disable_me)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(OUTPUT_NAME "disable_me")
+
+if(WIN32)
+    set(OS_NAME "windows")
+elseif(UNIX)
+    set(OS_NAME "linux")
+endif()
+
+if(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
+    set(OUTPUT_NAME "${OUTPUT_NAME}_${OS_NAME}_debug")
+elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(OUTPUT_NAME "${OUTPUT_NAME}_${OS_NAME}")
+endif()
+
 include(FetchContent)
 FetchContent_Declare(
         endstone
