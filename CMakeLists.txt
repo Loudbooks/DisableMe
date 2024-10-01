@@ -7,8 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(FetchContent)
 FetchContent_Declare(
         endstone
-        GIT_REPOSITORY https://github.com/Loudbooks/endstone.git
-        GIT_TAG main
+        GIT_REPOSITORY https://github.com/EndstoneMC/endstone.git
+        GIT_TAG v0.5.4.1
 )
 FetchContent_MakeAvailable(endstone)
 
