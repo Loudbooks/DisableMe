@@ -41,25 +41,25 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: disableme_windows
-        path: ${{github.workspace}}/build/Release/endstone_disable_me.dll
+        path: ${{github.workspace}}/build/Release/disable_me_windows.dll
 
     - name: Upload Artifact (Windows - Debug)
       if: matrix.os == 'windows-latest' && matrix.build_type == 'RelWithDebInfo'
       uses: actions/upload-artifact@v4
       with:
-        name: disableme_windows_debug
-        path: ${{github.workspace}}/build/RelWithDebInfo/endstone_disable_me.dll
+        name: disable_me_windows_debug
+        path: ${{github.workspace}}/build/RelWithDebInfo/disable_me_windows_debug.dll
 
     - name: Upload Artifact (Linux - Release)
       if: matrix.os == 'ubuntu-latest' && matrix.build_type == 'Release'
       uses: actions/upload-artifact@v4
       with:
         name: disableme_linux
-        path: ${{github.workspace}}/build/endstone_disable_me.so
+        path: ${{github.workspace}}/build/disable_me_linux.so
 
     - name: Upload Artifact (Linux - Debug)
       if: matrix.os == 'ubuntu-latest' && matrix.build_type == 'RelWithDebInfo'
       uses: actions/upload-artifact@v4
       with:
-        name: disableme_linux_debug
-        path: ${{github.workspace}}/build/endstone_disable_me.so
+        name: disable_me_linux_debug
+        path: ${{github.workspace}}/build/disable_me_linux_debug.so
