@@ -27,3 +27,4 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(endstone)
 
 endstone_add_plugin(${PROJECT_NAME} src/disable_me.cpp)
+set_target_properties(disable_me PROPERTIES OUTPUT_NAME ${OUTPUT_NAME})

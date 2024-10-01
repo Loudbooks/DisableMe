@@ -40,7 +40,7 @@ jobs:
       if: matrix.os == 'windows-latest' && matrix.build_type == 'Release'
       uses: actions/upload-artifact@v4
       with:
-        name: disableme_windows
+        name: disable_me_windows
         path: ${{github.workspace}}/build/Release/disable_me_windows.dll
 
     - name: Upload Artifact (Windows - Debug)
@@ -54,7 +54,7 @@ jobs:
       if: matrix.os == 'ubuntu-latest' && matrix.build_type == 'Release'
       uses: actions/upload-artifact@v4
       with:
-        name: disableme_linux
+        name: disable_me_linux
         path: ${{github.workspace}}/build/disable_me_linux.so
 
     - name: Upload Artifact (Linux - Debug)
